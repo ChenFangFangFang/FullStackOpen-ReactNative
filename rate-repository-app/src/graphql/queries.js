@@ -19,5 +19,12 @@ query  {
   }
 }
 `;
-
+export const ME = gql`
+  query {
+    me {
+      id
+      username
+    }
+  }
+`;
 // other queries...
