@@ -60,26 +60,26 @@ const styles = StyleSheet.create({
 
 const RepositoryItem = ({ repository }) => {
   return (
-    <View style={styles.container}>
+    <View testID="repositoryItem" style={styles.container}>
       <View style={styles.topContainer}>
         <View style={styles.avatarContainer}>
         <Image source={{ uri: repository.ownerAvatarUrl }} style={styles.avatar} />
       </View>
       <View style={styles.infoContainer}>
-      <Text fontWeight="bold" fontSize="subheading">{repository.fullName}</Text>
-      <Text color="textSecondary" style={styles.description}>{repository.description}</Text>
+      <Text testID="fullName" fontWeight="bold" fontSize="subheading">{repository.fullName}</Text>
+      <Text testID="description" color="textSecondary" style={styles.description}>{repository.description}</Text>
       <View style={styles.languageContainer}>
-      <Text style={styles.languageText}>{repository.language}</Text>
+      <Text testID="language" style={styles.languageText}>{repository.language}</Text>
 
       </View>
         </View>
         </View>
 
     <View style={styles.statsContainer}>
-    <ItemStat label="Stars" value={repository.stargazersCount} />
-    <ItemStat label="Forks" value={repository.forksCount} />
-    <ItemStat label="Rating" value={repository.ratingAverage} />
-    <ItemStat label="Reviews" value={repository.reviewCount} />
+    <ItemStat testID="stars" label="Stars" value={repository.stargazersCount} />
+    <ItemStat testID="forks" label="Forks" value={repository.forksCount} />
+    <ItemStat testID="rating" label="Rating" value={repository.ratingAverage} />
+    <ItemStat testID="reviews" label="Reviews" value={repository.reviewCount} />
     </View></View>
     
   );
