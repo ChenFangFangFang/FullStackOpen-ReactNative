@@ -15,10 +15,11 @@ const styles = StyleSheet.create({
 });
 
 const formatNumber = (num) => {
+  if (!num && num !== 0) return '0';  // 处理 undefined 或 null
   if (num >= 1000) {
     return `${(num / 1000).toFixed(1)}k`;
   }
-  return num;
+  return num.toString();  // 确保返回字符串
 };
 
 const ItemStat = ({ label, value, testID }) => {

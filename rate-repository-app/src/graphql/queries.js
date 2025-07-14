@@ -14,6 +14,7 @@ query  {
         ownerAvatarUrl
         stargazersCount
         reviewCount
+        ratingAverage
       }
     }
   }
@@ -24,6 +25,22 @@ export const ME = gql`
     me {
       id
       username
+    }
+  }
+`;
+export const GET_SINGLE_REPOSITORY = gql`
+  query Repository($id: ID!) {
+    repository(id: $id) {
+      id
+        language
+        url
+        description
+        forksCount
+        fullName
+        ownerAvatarUrl
+        stargazersCount
+        reviewCount
+        ratingAverage
     }
   }
 `;
