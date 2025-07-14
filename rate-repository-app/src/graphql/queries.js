@@ -44,4 +44,23 @@ export const GET_SINGLE_REPOSITORY = gql`
     }
   }
 `;
-// other queries...
+export const GET_REVIEWS = gql`
+  query Repository($id: ID!) {
+    repository(id: $id) {
+      reviews {
+        edges {
+          node {
+            id
+            text
+            rating
+            createdAt
+            user {
+              id
+              username
+            }
+          }
+        }
+      }
+    }
+  }
+`;
