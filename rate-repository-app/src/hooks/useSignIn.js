@@ -2,7 +2,6 @@ import { useMutation, useApolloClient } from '@apollo/client';
 import { AUTHENTICATE } from '../graphql/mutation';
 import useAuthStorage from '../hooks/useAuthStorage';
 import Constants from 'expo-constants';
-
 const useSignIn = () => {
   const authStorage = useAuthStorage();
   const apolloClient = useApolloClient();
