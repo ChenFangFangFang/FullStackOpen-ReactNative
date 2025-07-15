@@ -5,6 +5,7 @@ import AppBar from './AppBar';
 import SignIn from './SignIn';
 import theme from '../theme';
 import SingleRepository from './SingleRepository';
+import CreateReview from './CreateReview';
 const styles = StyleSheet.create({
     container: {
       flexGrow: 1,
@@ -27,6 +28,7 @@ const Main = () => {
         <Route path="/signin" element={<SignIn />} />
         <Route path="*" element={<Navigate to="/" replace />} />
         <Route path="/:repositoryId" element={<SingleRepository />} />
+        <Route path="/create-review" element={<CreateReview />} />
       </Routes>
     </View>
   );
