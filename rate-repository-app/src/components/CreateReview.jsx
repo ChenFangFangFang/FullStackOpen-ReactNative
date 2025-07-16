@@ -1,4 +1,4 @@
-import useCreateReview from '../hooks/useMutation';
+import useCreateReview from '../hooks/useCreateReview';
 import { useNavigate } from 'react-router-native';  
 import ReviewForm from './ReviewForm';
 
@@ -22,7 +22,7 @@ const CreateReview = () => {
             });
             
             if (result.data) {
-                navigate('/repositories');
+                navigate('/');
             }
         } catch (e) {
             console.log("error", e);

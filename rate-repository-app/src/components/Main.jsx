@@ -7,6 +7,7 @@ import theme from '../theme';
 import SingleRepository from './SingleRepository';
 import CreateReview from './CreateReview';
 import SignUp from './SignUp';
+import MyReview from './MyReview';
 const styles = StyleSheet.create({
     container: {
       flexGrow: 1,
@@ -27,10 +28,11 @@ const Main = () => {
       <Routes>
         <Route path="/" element={<RepositoryList />} />
         <Route path="/signin" element={<SignIn />} />
-        <Route path="*" element={<Navigate to="/" replace />} />
-        <Route path="/:repositoryId" element={<SingleRepository />} />
         <Route path="/create-review" element={<CreateReview />} />
         <Route path="/signup" element={<SignUp />} />
+        <Route path="/my-reviews" element={<MyReview />} />
+        <Route path="/:repositoryId" element={<SingleRepository />} />
+        <Route path="*" element={<Navigate to="/" replace />} />
       </Routes>
     </View>
   );

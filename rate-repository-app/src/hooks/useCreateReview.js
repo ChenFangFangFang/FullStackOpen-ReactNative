@@ -15,4 +15,4 @@ const useCreateReview = () => {
   return [createReview, result];
 };
 
-export { useCreateReview };
+export default useCreateReview;

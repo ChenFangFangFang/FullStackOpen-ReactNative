@@ -45,9 +45,13 @@ const AppBar = () => {
         <Link to="/create-review" style={styles.tab}>
           <Text style={styles.text}>Create a review</Text>
         </Link>
+        <Link to="/my-reviews" style={styles.tab}>
+          <Text style={styles.text}>My reviews</Text>
+        </Link> 
         <Link to="/signin" style={styles.tab} onPress={onSignOut}>
           <Text style={styles.text}>Sign out</Text>
         </Link>
+       
          </>
       ):(
         <>
